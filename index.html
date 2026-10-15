@@ -4,95 +4,63 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#080b12">
-<meta name="description" content="Nollan Play: discover football coverage, highlights, trailers and free-to-watch films from official streaming sources.">
-<title>Nollan Play | Football & Movies</title>
+<title>Nollan Play</title>
 <style>
-:root{color-scheme:dark;--bg:#080b12;--panel:#111722;--panel2:#151e2c;--line:#263244;--muted:#9aa8bb;--text:#f4f7fb;--lime:#c7ff5e;--blue:#74b8ff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#203044 0,transparent 36%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(1160px,calc(100% - 32px));margin:auto}.topbar{position:sticky;top:0;z-index:10;background:#080b12eF;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff12}.nav{height:72px;display:flex;align-items:center;gap:24px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.7px;font-size:21px;white-space:nowrap}.logo{width:34px;height:34px;border-radius:11px;background:var(--lime);color:#11180a;display:grid;place-items:center;font-weight:1000}.brand span:last-child{color:var(--lime)}.navlinks{display:flex;gap:8px;margin-left:auto}.navlinks a{padding:10px 13px;color:#bdc7d6;border-radius:10px;font-size:14px}.navlinks a:hover,.navlinks a.active{background:#ffffff0e;color:#fff}.search{width:190px;background:#121925;border:1px solid var(--line);border-radius:12px;padding:11px 13px;color:white;outline:none}.search:focus{border-color:var(--lime)}.hero{padding:56px 0 30px}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--lime);font-size:12px;letter-spacing:1.7px;text-transform:uppercase;font-weight:800}.pulse{width:7px;height:7px;background:var(--lime);border-radius:50%;box-shadow:0 0 14px var(--lime)}h1{font-size:clamp(42px,7vw,76px);line-height:.98;letter-spacing:-4px;margin:17px 0 18px;max-width:780px}h1 em{font-style:normal;color:var(--lime)}.hero p{color:var(--muted);font-size:17px;line-height:1.7;max-width:630px;margin:0}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 17px;border-radius:12px;font-weight:800;font-size:14px;border:1px solid transparent;cursor:pointer;transition:transform .15s,background .15s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--lime);color:#11180a}.secondary{border-color:var(--line);background:#111722}.strip{display:flex;gap:10px;flex-wrap:wrap;padding:18px 0 34px}.pill{border:1px solid var(--line);border-radius:99px;padding:8px 12px;color:#b7c3d3;font-size:12px}.section{padding:24px 0 42px;scroll-margin-top:86px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:20px}.section-head h2{font-size:27px;letter-spacing:-1px;margin:7px 0 0}.section-head p{color:var(--muted);font-size:13px;margin:7px 0 0}.kicker{color:var(--lime);font-size:11px;text-transform:uppercase;letter-spacing:1.7px;font-weight:900}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.card{background:linear-gradient(145deg,#151e2b,#0e141e);border:1px solid var(--line);border-radius:18px;overflow:hidden;min-width:0;transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-3px);border-color:#65788f}.art{height:150px;display:flex;align-items:flex-end;padding:17px;position:relative;overflow:hidden;background:linear-gradient(135deg,#1d3b31,#0d171c)}.art:before{content:"";position:absolute;width:190px;height:190px;border:1px solid #ffffff23;border-radius:50%;right:-28px;top:-80px;box-shadow:0 0 0 24px #ffffff06,0 0 0 48px #ffffff05}.art .symbol{position:absolute;right:20px;top:20px;font-size:56px;filter:drop-shadow(0 8px 15px #0007)}.art .tag{position:relative;background:#07100ccc;border:1px solid #ffffff22;border-radius:99px;padding:6px 9px;font-size:10px;letter-spacing:1px;text-transform:uppercase;font-weight:900}.art.football{background:linear-gradient(130deg,#174b38,#101c24)}.art.movies{background:linear-gradient(130deg,#45305c,#171a2a)}.art.highlights{background:linear-gradient(130deg,#49361c,#171d27)}.art.archive{background:linear-gradient(130deg,#17344d,#111723)}.art.trailer{background:linear-gradient(130deg,#49262c,#171723)}.art.live{background:linear-gradient(130deg,#263f55,#111723)}.card-body{padding:17px}.card h3{margin:0 0 8px;font-size:17px;letter-spacing:-.3px}.card p{margin:0 0 16px;color:var(--muted);font-size:13px;line-height:1.6;min-height:42px}.card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px}.smallbtn{display:inline-flex;align-items:center;gap:7px;background:#ffffff0a;border:1px solid #ffffff19;padding:9px 11px;border-radius:10px;font-size:12px;font-weight:800}.smallbtn:hover{background:#ffffff15}.type{font-size:10px;color:#aab7c7;text-transform:uppercase;letter-spacing:1px}.notice{display:flex;gap:13px;align-items:flex-start;padding:16px 17px;border:1px solid #38445a;background:#111722;border-radius:14px;color:#c1ccda;font-size:12px;line-height:1.65;margin-top:18px}.notice strong{color:white}.notice .icon{font-size:20px}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid var(--line);border-radius:99px;padding:8px 12px;background:transparent;color:#b7c3d3;font-size:12px;cursor:pointer}.filter.active,.filter:hover{background:var(--lime);border-color:var(--lime);color:#10170a;font-weight:800}.empty{display:none;border:1px dashed var(--line);padding:26px;text-align:center;border-radius:16px;color:var(--muted)}footer{border-top:1px solid #ffffff12;margin-top:20px;padding:26px 0 36px;color:#8593a6;font-size:12px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.footbrand{color:#eef2f8;font-weight:900}.hide{display:none!important}
-@media(max-width:820px){.nav{height:auto;min-height:68px;flex-wrap:wrap;padding:13px 0;gap:12px}.navlinks{order:3;width:100%;margin:0;overflow:auto}.navlinks a{white-space:nowrap}.search{margin-left:auto;width:min(44vw,210px)}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}h1{letter-spacing:-2.5px}.hero{padding-top:40px}}
-@media(max-width:520px){.wrap{width:min(100% - 24px,1160px)}.grid{grid-template-columns:1fr}.art{height:130px}.hero p{font-size:15px}.section-head{align-items:flex-start;flex-direction:column}.search{width:100%;order:2}.navlinks{order:3}.brand{margin-right:auto}.card p{min-height:0}.strip{padding-bottom:20px}}
-.embed-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.embed-frame{width:100%;aspect-ratio:16/10;background:#05070b;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}.embed-frame iframe{width:100%;height:100%;border:0;background:#05070b}@media(max-width:700px){.embed-grid{grid-template-columns:1fr}.embed-frame{aspect-ratio:9/12}}\n</style>
+:root{color-scheme:dark;--bg:#080b12;--panel:#111722;--line:#263244;--muted:#9aa8bb;--text:#f4f7fb;--lime:#c7ff5e}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+body{display:flex;flex-direction:column;min-height:100dvh}
+header{display:flex;align-items:center;gap:16px;padding:12px 16px;background:#0b1019;border-bottom:1px solid var(--line);flex-shrink:0}
+.brand{display:flex;align-items:center;gap:9px;font-size:17px;font-weight:900;letter-spacing:-.4px;white-space:nowrap}
+.logo{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:var(--lime);color:#11180a;font-weight:1000}
+.brand span:last-child{color:var(--lime)}
+nav{display:flex;gap:8px;margin-left:auto}
+button{border:1px solid var(--line);background:#141c29;color:#d7e0ed;border-radius:10px;padding:10px 15px;font:inherit;font-size:13px;font-weight:800;cursor:pointer}
+button[aria-selected="true"]{background:var(--lime);color:#11180a;border-color:var(--lime)}
+main{flex:1;min-height:0;display:flex;flex-direction:column}
+.panel{display:none;flex:1;min-height:0}
+.panel.active{display:flex;flex-direction:column}
+.panel-label{display:flex;align-items:center;gap:9px;padding:10px 15px;color:var(--muted);font-size:12px;border-bottom:1px solid #ffffff12;flex-shrink:0}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--lime)}
+.frame-wrap{position:relative;flex:1;min-height:0;background:#05070b}
+iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#05070b}
+@media(max-width:480px){header{padding:10px;gap:8px}.brand{font-size:14px}nav{gap:6px}button{padding:10px 11px;font-size:12px}.logo{width:29px;height:29px}}
+</style>
 </head>
 <body>
-<header class="topbar"><div class="wrap nav">
-<a class="brand" href="#home" aria-label="Nollan Play home"><span class="logo">N</span><span>NOLLAN <span>PLAY</span></span></a>
-<nav class="navlinks" aria-label="Main navigation"><a class="active" href="#home">Home</a><a href="#football">Football</a><a href="#movies">Movies</a><a href="#highlights">Highlights</a></nav>
-<input id="search" class="search" type="search" placeholder="Search football, movies…" aria-label="Search content">
-</div></header>
-<main id="home" class="wrap">
-<section class="hero">
-<div class="eyebrow"><span class="pulse"></span> Your entertainment hub</div>
-<h1>One place.<br><em>Game on. Movie on.</em></h1>
-<p>Find football coverage, match highlights, trailers and films available from official streaming platforms. No account. No subscription to Nollan Play. Just choose what to explore.</p>
-<div class="hero-actions"><a class="btn primary" href="#football">⚽ Explore football <span>↗</span></a><a class="btn secondary" href="#movies">▶ Discover movies</a></div>
-<div class="strip"><span class="pill">✓ Free to browse</span><span class="pill">✓ No Nollan Play sign-up</span><span class="pill">↗ Official viewing sources</span><span class="pill">▣ Mobile-friendly</span></div>
+<header>
+<a class="brand" href="#" aria-label="Nollan Play"><span class="logo">N</span><span>NOLLAN PLAY</span></a>
+<nav aria-label="Choose stream">
+<button type="button" id="sports-tab" aria-controls="sports-panel" aria-selected="true">⚽ Football</button>
+<button type="button" id="movies-tab" aria-controls="movies-panel" aria-selected="false">🎬 Movies</button>
+</nav>
+</header>
+<main>
+<section class="panel active" id="sports-panel" aria-label="Embedded football channels">
+<div class="panel-label"><span class="dot"></span> Football & sports channels</div>
+<div class="frame-wrap"><iframe src="https://dlive.sx/24-7-channels.php" title="Embedded football and sports channels" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
 </section>
-<section id="football" class="section">
-<div class="section-head"><div><div class="kicker">The beautiful game</div><h2>Football zone ⚽</h2><p>Follow matches, catch up on highlights and find official live coverage.</p></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="live">Live & coverage</button><button class="filter" data-filter="highlights">Highlights</button></div></div>
-<div class="grid" id="football-grid">
-<article class="card searchable" data-category="live" data-search="fifa plus football live matches archive documentaries"><div class="art football"><span class="tag">Official platform</span><span class="symbol">⚽</span></div><div class="card-body"><div class="type">Live coverage · Replays</div><h3>FIFA+</h3><p>Explore football matches, replays, documentaries and selected live coverage where available.</p><div class="card-foot"><span class="type">Availability varies by region</span><a class="smallbtn" href="https://www.plus.fifa.com/" target="_blank" rel="noopener noreferrer">Open FIFA+ ↗</a></div></div></article>
-<article class="card searchable" data-category="highlights" data-search="caf tv africa football highlights champions league official"><div class="art highlights"><span class="tag">African football</span><span class="symbol">🏆</span></div><div class="card-body"><div class="type">Highlights · Features</div><h3>CAF official video</h3><p>Find African football highlights, tournament features and videos from the official CAF channel.</p><div class="card-foot"><span class="type">Official channel</span><a class="smallbtn" href="https://www.youtube.com/@CAF_TV" target="_blank" rel="noopener noreferrer">Watch videos ↗</a></div></div></article>
-<article class="card searchable" data-category="live" data-search="premier league football official live broadcast where to watch"><div class="art live"><span class="tag">Broadcast guide</span><span class="symbol">📺</span></div><div class="card-body"><div class="type">Live match guide</div><h3>Where to watch</h3><p>Find official Premier League broadcast partners and viewing options for your country.</p><div class="card-foot"><span class="type">Regional listings</span><a class="smallbtn" href="https://www.premierleague.com/" target="_blank" rel="noopener noreferrer">Visit Premier League ↗</a></div></div></article>
-<article class="card searchable" data-category="highlights" data-search="UEFA football highlights official champions league videos"><div class="art highlights"><span class="tag">European football</span><span class="symbol">🌍</span></div><div class="card-body"><div class="type">Highlights · News</div><h3>UEFA video & highlights</h3><p>Catch official competition clips, match recaps and football stories from UEFA.</p><div class="card-foot"><span class="type">Official source</span><a class="smallbtn" href="https://www.uefa.com/" target="_blank" rel="noopener noreferrer">Explore UEFA ↗</a></div></div></article>
-</div>
-<div class="notice"><span class="icon">ℹ️</span><div><strong>About live streams</strong><br>Nollan Play links to official providers rather than rebroadcasting channels without permission. Live match availability and any provider fees depend on the competition and your region.</div></div>
+<section class="panel" id="movies-panel" aria-label="Embedded movie library">
+<div class="panel-label"><span class="dot"></span> Movies & TV shows</div>
+<div class="frame-wrap"><iframe src="https://www.1shows.org/" title="Embedded movie and TV site" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
 </section>
-<section id="movies" class="section">
-<div class="section-head"><div><div class="kicker">Lights down, screen up</div><h2>Movie lounge 🎬</h2><p>Discover films, trailers and free-to-watch collections from authorized sources.</p></div></div>
-<div class="grid" id="movie-grid">
-<article class="card searchable" data-category="movies" data-search="internet archive public domain classic movies free films"><div class="art archive"><span class="tag">Free collection</span><span class="symbol">🎞️</span></div><div class="card-body"><div class="type">Classic films</div><h3>Internet Archive</h3><p>Browse its film collections and select titles that are marked for public access or reuse.</p><div class="card-foot"><span class="type">Check each title's rights</span><a class="smallbtn" href="https://archive.org/details/movies" target="_blank" rel="noopener noreferrer">Browse films ↗</a></div></div></article>
-<article class="card searchable" data-category="movies" data-search="youtube movies official free movies trailers"><div class="art trailer"><span class="tag">Films & trailers</span><span class="symbol">▶️</span></div><div class="card-body"><div class="type">Movies · Trailers</div><h3>YouTube Movies</h3><p>Explore official movie pages, trailers and any free titles offered in your region.</p><div class="card-foot"><span class="type">Regional availability</span><a class="smallbtn" href="https://www.youtube.com/movies" target="_blank" rel="noopener noreferrer">Explore movies ↗</a></div></div></article>
-<article class="card searchable" data-category="movies" data-search="public domain cinema collection classic movies watch free"><div class="art movies"><span class="tag">Classic cinema</span><span class="symbol">🍿</span></div><div class="card-body"><div class="type">Discover</div><h3>Public-domain picks</h3><p>Look for classic cinema that is genuinely in the public domain or published with viewing rights.</p><div class="card-foot"><span class="type">Verify title rights</span><a class="smallbtn" href="https://creativecommons.org/about/program-areas/arts-culture/" target="_blank" rel="noopener noreferrer">Learn about rights ↗</a></div></div></article>
-</div>
-<div class="notice"><span class="icon">🛡️</span><div><strong>Free means no Nollan Play account</strong><br>Third-party services may have their own accounts, ads, regional limits or paid titles. Nollan Play does not host or claim ownership of third-party films.</div></div>
-</section>
-<section id="highlights" class="section">
-<div class="section-head"><div><div class="kicker">Quick discovery</div><h2>More to explore</h2><p>Jump straight to official video libraries and sports coverage.</p></div></div>
-<div class="grid">
-<article class="card searchable" data-category="highlights" data-search="Olympics official video sports highlights"><div class="art live"><span class="tag">Sport</span><span class="symbol">🥇</span></div><div class="card-body"><h3>Olympics video</h3><p>Official Olympic moments, athlete stories and selected event coverage.</p><div class="card-foot"><span class="type">Official videos</span><a class="smallbtn" href="https://olympics.com/" target="_blank" rel="noopener noreferrer">Explore ↗</a></div></div></article>
-<article class="card searchable" data-category="highlights" data-search="football news official fixtures scores premier league"><div class="art football"><span class="tag">Football</span><span class="symbol">📅</span></div><div class="card-body"><h3>Fixtures & updates</h3><p>Check official league sites for confirmed fixtures, results and competition updates.</p><div class="card-foot"><span class="type">Official updates</span><a class="smallbtn" href="https://www.premierleague.com/fixtures" target="_blank" rel="noopener noreferrer">View fixtures ↗</a></div></div></article>
-<article class="card searchable" data-category="movies" data-search="movie trailers official YouTube search cinema"><div class="art trailer"><span class="tag">Coming soon</span><span class="symbol">🎥</span></div><div class="card-body"><h3>Find a trailer</h3><p>Search YouTube for official trailers before picking your next movie night.</p><div class="card-foot"><span class="type">Official trailers</span><a class="smallbtn" href="https://www.youtube.com/results?search_query=official+movie+trailers" target="_blank" rel="noopener noreferrer">Search trailers ↗</a></div></div></article>
-</div>
-<div id="empty" class="empty">No matches found. Try a different search.</div>
-</section>
-<section id="external-streams" class="section">
-<div class="section-head"><div><div class="kicker">Watch here</div><h2>Embedded streams 📺</h2><p>Choose a source below. Playback depends on whether the provider permits embedding.</p></div></div>
-<div class="grid embed-grid">
-<article class="card searchable" data-category="live" data-search="football sports live channels dlive embedded player"><div class="card-body"><div class="type">Football · Sports</div><h3>24/7 Channels</h3><p>Sports channel page embedded from the source you provided.</p></div><div class="embed-frame"><iframe src="https://dlive.sx/24-7-channels.php" title="DLive 24/7 football and sports channels" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div><div class="card-body"><a class="smallbtn" href="https://dlive.sx/24-7-channels.php" target="_blank" rel="noopener noreferrer">Open source directly ↗</a></div></article>
-<article class="card searchable" data-category="movies" data-search="movies tv shows 1shows embedded player"><div class="card-body"><div class="type">Movies · TV shows</div><h3>Movie library</h3><p>Movie site embedded from the source you provided.</p></div><div class="embed-frame"><iframe src="https://www.1shows.org/" title="1Shows movie and TV streaming site" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div><div class="card-body"><a class="smallbtn" href="https://www.1shows.org/" target="_blank" rel="noopener noreferrer">Open source directly ↗</a></div></article>
-</div>
-<div class="notice"><span class="icon">ℹ️</span><div><strong>If a player area is blank</strong><br>Some websites block iframe embedding with their security settings. If that happens, use “Open source directly” or request an official embed URL from the provider.</div></div>
-</section>
-<footer><div><span class="footbrand">NOLLAN PLAY</span> · Football, films and good viewing.</div><div>Independent discovery site. Third-party names and services belong to their respective owners.</div></footer>
 </main>
 <script>
-const search = document.getElementById('search');
-const cards = [...document.querySelectorAll('.searchable')];
-const filters = [...document.querySelectorAll('[data-filter]')];
-let activeFilter = 'all';
-function applyFilters(){
- const q = search.value.trim().toLowerCase();
- let visible = 0;
- cards.forEach(card=>{
-  const category = card.dataset.category || '';
-  const words = (card.dataset.search || '') + ' ' + card.innerText;
-  const categoryMatch = activeFilter === 'all' || category === activeFilter;
-  const searchMatch = !q || words.toLowerCase().includes(q);
-  const show = categoryMatch && searchMatch;
-  card.classList.toggle('hide',!show);
-  if(show) visible++;
- });
- document.getElementById('empty').style.display = visible ? 'none' : 'block';
+const sportsTab=document.getElementById('sports-tab');
+const moviesTab=document.getElementById('movies-tab');
+const sportsPanel=document.getElementById('sports-panel');
+const moviesPanel=document.getElementById('movies-panel');
+function selectTab(which){
+ const sports=which==='sports';
+ sportsTab.setAttribute('aria-selected',String(sports));
+ moviesTab.setAttribute('aria-selected',String(!sports));
+ sportsPanel.classList.toggle('active',sports);
+ moviesPanel.classList.toggle('active',!sports);
+ const frame=moviesPanel.querySelector('iframe');
+ if(!sports && frame.loading==='lazy') frame.loading='eager';
 }
-search.addEventListener('input',applyFilters);
-filters.forEach(btn=>btn.addEventListener('click',()=>{
- activeFilter = btn.dataset.filter;
- filters.forEach(b=>b.classList.toggle('active',b===btn));
- applyFilters();
-}));
-document.querySelectorAll('.navlinks a').forEach(link=>link.addEventListener('click',()=>{
- document.querySelectorAll('.navlinks a').forEach(a=>a.classList.toggle('active',a===link));
-}));
+sportsTab.addEventListener('click',()=>selectTab('sports'));
+moviesTab.addEventListener('click',()=>selectTab('movies'));
 </script>
 </body>
 </html>
