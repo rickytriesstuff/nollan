@@ -4,63 +4,76 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#080b12">
-<title>Nollan Play</title>
+<meta name="description" content="Premier League TV football stream page.">
+<title>Premier League TV</title>
 <style>
 :root{color-scheme:dark;--bg:#080b12;--panel:#111722;--line:#263244;--muted:#9aa8bb;--text:#f4f7fb;--lime:#c7ff5e}
 *{box-sizing:border-box}
-html,body{margin:0;width:100%;height:100%;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
-body{display:flex;flex-direction:column;min-height:100dvh}
-header{display:flex;align-items:center;gap:16px;padding:12px 16px;background:#0b1019;border-bottom:1px solid var(--line);flex-shrink:0}
-.brand{display:flex;align-items:center;gap:9px;font-size:17px;font-weight:900;letter-spacing:-.4px;white-space:nowrap}
-.logo{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:var(--lime);color:#11180a;font-weight:1000}
-.brand span:last-child{color:var(--lime)}
-nav{display:flex;gap:8px;margin-left:auto}
-button{border:1px solid var(--line);background:#141c29;color:#d7e0ed;border-radius:10px;padding:10px 15px;font:inherit;font-size:13px;font-weight:800;cursor:pointer}
-button[aria-selected="true"]{background:var(--lime);color:#11180a;border-color:var(--lime)}
-main{flex:1;min-height:0;display:flex;flex-direction:column}
-.panel{display:none;flex:1;min-height:0}
-.panel.active{display:flex;flex-direction:column}
-.panel-label{display:flex;align-items:center;gap:9px;padding:10px 15px;color:var(--muted);font-size:12px;border-bottom:1px solid #ffffff12;flex-shrink:0}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--lime)}
-.frame-wrap{position:relative;flex:1;min-height:0;background:#05070b}
-iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#05070b}
-@media(max-width:480px){header{padding:10px;gap:8px}.brand{font-size:14px}nav{gap:6px}button{padding:10px 11px;font-size:12px}.logo{width:29px;height:29px}}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+body{min-height:100vh;display:flex;flex-direction:column}
+header{height:70px;display:flex;align-items:center;justify-content:center;padding:0 16px;background:#0b1019;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:11px;font-size:20px;font-weight:950;letter-spacing:.5px}
+.logo{display:grid;place-items:center;width:35px;height:35px;border-radius:10px;background:var(--lime);color:#11180a;font-weight:1000}
+main{width:min(100%,980px);margin:0 auto;padding:30px 16px 44px;flex:1}
+.intro{text-align:center;margin:4px auto 24px}
+.eyebrow{color:var(--lime);font-size:11px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+h1{font-size:clamp(28px,5vw,42px);letter-spacing:-1.5px;margin:10px 0}
+.intro p{color:var(--muted);font-size:14px;line-height:1.6;margin:0}
+.stream-card{max-width:760px;margin:0 auto;border:1px solid var(--line);background:linear-gradient(145deg,#151e2b,#0e141e);border-radius:18px;overflow:hidden}
+.stream-preview{position:relative;aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;overflow:hidden;background:radial-gradient(ellipse at 50% 120%,#245b3e 0,transparent 60%),linear-gradient(135deg,#142d24,#080e14)}
+.pitch{position:absolute;inset:10%;border:1px solid #ffffff2b;border-radius:6px;transform:perspective(450px) rotateX(7deg)}
+.pitch:before{content:"";position:absolute;left:50%;top:0;bottom:0;border-left:1px solid #ffffff2b}
+.pitch:after{content:"";position:absolute;width:25%;aspect-ratio:1;border:1px solid #ffffff2b;border-radius:50%;left:37.5%;top:35%}
+.ball{position:relative;z-index:1;font-size:clamp(44px,8vw,70px);filter:drop-shadow(0 8px 12px #0009)}
+.watch{position:relative;z-index:1;border:0;border-radius:999px;background:var(--lime);color:#10170a;font-weight:950;font-size:15px;padding:14px 23px;cursor:pointer;box-shadow:0 8px 30px #0007}
+.watch:hover{transform:translateY(-1px);filter:brightness(1.04)}
+.stream-title{padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.stream-title h2{margin:0;font-size:16px}
+.live{display:flex;align-items:center;gap:7px;color:#d4deea;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.live:before{content:"";width:7px;height:7px;border-radius:50%;background:#ff5353;box-shadow:0 0 10px #ff535377}
+.player{display:none;background:#000;aspect-ratio:16/9;width:100%}
+.player.active{display:block}
+.player iframe{display:block;width:100%;height:100%;min-height:240px;border:0;background:#000}
+.help{max-width:760px;margin:14px auto 0;color:#8492a6;font-size:12px;line-height:1.6;text-align:center}
+footer{text-align:center;padding:18px;border-top:1px solid #ffffff10;color:#728096;font-size:11px}
+@media(max-width:520px){header{height:60px}.brand{font-size:17px}main{padding:23px 12px 32px}.stream-title{padding:13px}.player iframe{min-height:210px}}
 </style>
 </head>
 <body>
-<header>
-<a class="brand" href="#" aria-label="Nollan Play"><span class="logo">N</span><span>NOLLAN PLAY</span></a>
-<nav aria-label="Choose stream">
-<button type="button" id="sports-tab" aria-controls="sports-panel" aria-selected="true">⚽ Football</button>
-<button type="button" id="movies-tab" aria-controls="movies-panel" aria-selected="false">🎬 Movies</button>
-</nav>
-</header>
+<header><div class="brand"><span class="logo">⚽</span><span>PREMIER LEAGUE TV</span></div></header>
 <main>
-<section class="panel active" id="sports-panel" aria-label="Embedded football channels">
-<div class="panel-label"><span class="dot"></span> Football & sports channels</div>
-<div class="frame-wrap"><iframe src="https://dlive.sx/24-7-channels.php" title="Embedded football and sports channels" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+<section class="intro">
+<div class="eyebrow">Football streaming</div>
+<h1>Matchday starts here.</h1>
+<p>Tap below to open the football stream inside the app.</p>
 </section>
-<section class="panel" id="movies-panel" aria-label="Embedded movie library">
-<div class="panel-label"><span class="dot"></span> Movies & TV shows</div>
-<div class="frame-wrap"><iframe src="https://www.1shows.org/" title="Embedded movie and TV site" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+<section class="stream-card" aria-label="Premier League stream">
+<div class="stream-preview" id="preview">
+<div class="pitch"></div>
+<div class="ball" aria-hidden="true">⚽</div>
+<button class="watch" id="watch-button" type="button">▶ Watch stream</button>
+</div>
+<div class="stream-title"><h2>Premier League Live</h2><span class="live">Stream</span></div>
+<div class="player" id="player">
+<iframe src="about:blank" data-src="https://dlive.sx/stream/stream-414.php" title="Premier League TV stream" allowfullscreen allow="fullscreen; autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</div>
 </section>
+<p class="help" id="help">Select “Watch stream” to load the player. Playback depends on the stream provider and its embedding settings.</p>
 </main>
+<footer>Premier League TV · Independent streaming interface</footer>
 <script>
-const sportsTab=document.getElementById('sports-tab');
-const moviesTab=document.getElementById('movies-tab');
-const sportsPanel=document.getElementById('sports-panel');
-const moviesPanel=document.getElementById('movies-panel');
-function selectTab(which){
- const sports=which==='sports';
- sportsTab.setAttribute('aria-selected',String(sports));
- moviesTab.setAttribute('aria-selected',String(!sports));
- sportsPanel.classList.toggle('active',sports);
- moviesPanel.classList.toggle('active',!sports);
- const frame=moviesPanel.querySelector('iframe');
- if(!sports && frame.loading==='lazy') frame.loading='eager';
-}
-sportsTab.addEventListener('click',()=>selectTab('sports'));
-moviesTab.addEventListener('click',()=>selectTab('movies'));
+const button=document.getElementById('watch-button');
+const preview=document.getElementById('preview');
+const player=document.getElementById('player');
+const frame=player.querySelector('iframe');
+button.addEventListener('click',()=>{
+ if(!player.classList.contains('active')){
+  frame.src=frame.dataset.src;
+  player.classList.add('active');
+  preview.style.display='none';
+  document.getElementById('help').textContent='If playback does not load, the provider may restrict embedded playback.';
+ }
+});
 </script>
 </body>
 </html>
